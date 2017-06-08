@@ -1,0 +1,22 @@
+{
+  "name": "terrarium",
+  "version": "1.0.0",
+  "description": "Drag & drop terrarium",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JZenk/terrarium.git"
+  },
+  "author": "jennz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JZenk/terrarium/issues"
+  },
+  "homepage": "https://github.com/JZenk/terrarium#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
