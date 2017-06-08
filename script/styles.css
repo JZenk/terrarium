@@ -1,0 +1,225 @@
+body {
+  background: #333;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  font-family: 'Indie Flower', serif;
+  line-height: 1.4;
+  padding: 10px;
+}
+main {
+  display: flex;
+  width: 920px;
+  margin: 0 auto;
+}
+.plant-drawer {
+  padding: 20px 0;
+  width: 0%;
+  background: #DCEDC8;
+  margin-right: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: -100%;
+  transition: 2s all;
+}
+
+.plant-drawer.open {
+  left: 0;
+  width: 40%;
+  margin-right: 10px;
+}
+
+.plant-drawer p {
+  position: absolute;
+  left: 105%;
+  width: 200px;
+  z-index: 10;
+}
+.plant-drawer div {
+  text-align: center;
+  width: 50%;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/580680/circle.svg) no-repeat;
+  background-position: bottom;
+  min-height: 120px;
+  position: relative;
+}
+.plant-drawer div.tall {
+  height: 230px;
+}
+.plant-drawer div.small .succulent {
+  width: 50%;
+}
+.succulent {
+  position: absolute;
+  bottom: 3px;
+  max-height: 80%;
+  max-width: 90%;
+  opacity: 0.7;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.succulent:hover {
+  cursor: grab;
+  opacity: 1;
+}
+.terrarium-container {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+.terrarium-container.shrink {
+  width: 60%;
+}
+.terrarium-container p.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.terr-wrap {
+  position: absolute;
+  width: 30%;
+  transition: 1s all;
+}
+.terr-wrap .soil, .terr-wrap .frame {
+  width: 100%;
+  opacity: 0.8;
+}
+.terr-wrap .succulent {
+  opacity: 1;
+  z-index: 20;
+  transform: scale(0.8);
+}
+.terr-wrap .succulent.smaller{
+  transform: scale(0.6);
+}
+.terr-wrap:first-child {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.terr-wrap:nth-child(2), .terr-wrap:nth-child(3) {
+  top: 35%;
+}
+.terr-wrap:nth-child(3) {
+  right: 0%;
+}
+.terr-wrap:nth-child(4), .terr-wrap:nth-child(5) {
+  bottom: 5%;
+  left: 15%;
+}
+.terr-wrap:nth-child(5) {
+  left: initial;
+  right: 15%;
+}
+.terr-wrap:hover {
+  width: 33%;
+  cursor: pointer;
+}
+.terr-wrap:hover img{
+  opacity: 1;
+}
+.shrink .terr-wrap {
+  width: 100%;
+  bottom: initial;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.shrink .terr-wrap .soil, .shrink .terr-wrap .frame {
+  opacity: 1;
+}
+.frame {
+  position: absolute;
+  top: 0;
+  z-index: 300;
+  pointer-events: none;
+}
+.context-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+.thumb {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 0;
+  opacity: 0.4;
+}
+.thumb:after {
+  font-size: 12px;
+  position: absolute;
+  bottom: -26px;
+  left: 0px;
+  font-family: 'Indie Flower', serif;
+  content: 'selected item';
+}
+.fa {
+  font-size: 28px;
+  margin: 0 5px;
+  color: #ccc;
+  position: relative;
+}
+.fa:after {
+  font-size: 12px;
+  position: absolute;
+  bottom: -26px;
+  left: 0px;
+  opacity: 0;
+  font-family: 'Indie Flower', serif;
+}
+.fa:hover {
+  color: rgba(0,0,0,1);
+  cursor: pointer;
+}
+.fa:hover:after {
+  opacity: 1;
+}
+.fa-arrow-up:after {
+  content: 'bring forward';
+}
+.fa-arrow-down:after {
+  content: 'send back';
+}
+.fa-minus:after {
+  content: 'shrink';
+}
+.fa-plus:after {
+  content: 'grow';
+}
+.fa-trash:after {
+  content: 'delete';
+}
+.button-wrap {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  display:none;
+}
+.button {
+  text-decoration: none;
+  padding: 12px 22px;
+  border: 1px solid #333;
+  left: 10px;
+  font-size: 13px;
+  color: #333;
+}
+.button:hover {
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+}
+#help {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 200px;
+  transform: none;
+  display: none;
+  z-index: 10;
+}
+.shrink .button-wrap, .shrink .context-menu, .shrink #help {
+  display: block;
+}
