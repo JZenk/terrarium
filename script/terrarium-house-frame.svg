@@ -1,0 +1,13 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6a8ab;
+      }
+    </style>
+  </defs>
+  <title>terrarium-house-frame</title>
+  <g id="HOUSE">
+    <path id="FRAME" class="cls-1" d="M509.2,277.6L317.6,194.9l-0.9-.5-0.9.5-185,82.7h-1.6V527.1H510.7V277.6h-1.6Zm-10.1,0H471.5v-0.3l-111.9-60ZM316.7,199l146.8,78.6H175Zm-41.6,18.5L166.7,277.6H140.6Zm196.3,64.1h35.3V523.1H133.3V281.6h32m4,0H467.5"/>
+  </g>
+</svg>
